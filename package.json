@@ -4,7 +4,12 @@
   "description": "x-coin a new blockchain by node.js  ",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "start": "nodemon ./bin/www",
+    "dev": "nodemon ./src/block_chain.js",
+    "lint": "standard",
+    "dev1": "docker-compose up",
+    "dev:build": "docker-compose up --build",
+    "test": "mocha --timeout 15000000"
   },
   "repository": {
     "type": "git",
