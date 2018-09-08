@@ -10,6 +10,9 @@ class blockChain {
     addBlock(block) {
         this.chain.push(block)
     }
+    addNewBlockchain(){
+        
+    }
 }
 
 
