@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "x-coin a new blockchain by node.js  ",
   "main": "index.js",
+  "bin": "bin/www",
   "scripts": {
     "start": "nodemon ./bin/www",
     "dev": "nodemon ./src/block_chain.js",
