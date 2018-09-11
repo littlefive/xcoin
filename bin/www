@@ -2,6 +2,7 @@
 'use strict';
 
 var commander = require('commander');
+var blockChain = require('../src/block_chain.js');
 // program
 //     .version('0.0.1');
 // program
@@ -21,13 +22,22 @@ var commander = require('commander');
 //             console.log(list.join(' '));//控制台将所有文件名打印出来
 //         });
 //     });
+//     
 // program.parse(process.argv);//开始解析用户输入的命令
+    global.chain = null;
     commander.command('help').description('提示信息： 如何使用这个小工具.').action(() => { 
       commander.outputHelp(); 
     });
-    commander.command('trans [text]').description('翻译给定的文本，中英文都可.').action((text) => {
-        trans(text);
+    commander.command('new').description('初始化区块链').action((text) => {
+        chain = new blockChain();
+        console.log(chain)
     });
-
+    commander.command('add').description('增加新区块').action((text) => {
+        console.log(global.chain)
+        chain.addNewBlock(text)
+    });
+    commander.command('list').description('增加新区块').action((text) => {
+        console.log(chain)
+    });
     // 开始解析命令行参数
     commander.parse(process.argv);
