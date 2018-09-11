@@ -6,8 +6,8 @@ module.exports = class {
         this.previousHash = previousHash || '';
         const timestamp = this.timestamp = new Date();
         this.data = data || '';
-        const {pow, blockHash} = proofOfWork({data, timestamp , previousHash});
-        this.pow = pow;
+        const {proof, blockHash} = proofOfWork({data, timestamp , previousHash});
+        this.pow = proof;
         this.hash = blockHash;
         this.nonce = '';
     }
