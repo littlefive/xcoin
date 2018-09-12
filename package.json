@@ -6,7 +6,7 @@
   "bin": "bin/www",
   "scripts": {
     "start": "nodemon ./bin/www",
-    "dev": "nodemon ./src/block_chain.js",
+    "dev": "nodemon ./src/xcoin_node.js",
     "lint": "standard",
     "dev1": "docker-compose up",
     "dev:build": "docker-compose up --build",
@@ -23,17 +23,18 @@
   ],
   "dependencies": {
     "body-parser": "~1.18.2",
-    "minimist": "1.2.0",
     "commander": "^2.17.1",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
     "express": "~4.15.5",
     "express-validator": "^4.3.0",
     "jade": "~1.11.0",
+    "minimist": "1.2.0",
     "mocha": "^4.1.0",
     "morgan": "~1.9.0",
     "nodemon": "^1.14.11",
-    "serve-favicon": "~2.4.5"
+    "serve-favicon": "~2.4.5",
+    "ws": "^6.0.0"
   },
   "devDependencies": {
     "standard": "^10.0.3"

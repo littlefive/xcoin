@@ -2,8 +2,7 @@ let Block = require('./block.js');
 let config = require('./genesis_block_config.js');
 let crypto = require('crypto');
 const argv = require('minimist')(process.argv.slice(2));
-// module.exports = 
-class blockChain {
+module.exports = class  {
     constructor() {
         const genesis = new Block(config.genesis);
         this.chain = [genesis];
@@ -29,10 +28,19 @@ class blockChain {
         return this.chain.slice(-1)[0]
     }
 }
-let list = new blockChain();
-list.addBlock();
+// let list = new blockChain();
+// list.addBlock();
+// console.log(list)
+// list.addBlock();
+// console.log(list)
+// list.addBlock();
+// console.log(list)
+// list.addBlock();
+// console.log(list)
+// list.addBlock();
+// console.log(list)
 
-console.log(list)
+// console.log(list)
 
 // let hash1 = crypto.createHmac('sha256', 'ss')
 //     .update('created by jollen')
