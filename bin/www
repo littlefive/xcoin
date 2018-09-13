@@ -37,7 +37,10 @@ var blockChain = require('../src/block_chain.js');
         chain.addNewBlock(text)
     });
     commander.command('list').description('增加新区块').action((text) => {
-        let connection = new WebSocket(`ws://127.0.0.1:8888`);
+        let connection = new WebSocket(`ws://127.0.0.1:8889`);
+        connection.on('open', (msg) =>{
+            connection.send(JSON.stringify({event: 'message'}))
+        });
     });
     // 开始解析命令行参数
     commander.parse(process.argv);

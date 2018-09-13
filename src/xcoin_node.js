@@ -4,7 +4,7 @@ const WebSocket = require('ws');
 const BrewNode = function(port){
     let brewSockets = [];
     let brewServer;
-    let _port = 8888
+    let _port = 8889
     let chain = new blockChain();
 
     function init(){
@@ -81,4 +81,5 @@ const BrewNode = function(port){
 
 
 let node = BrewNode();
-node.init()
+node.init();
+node.addPeer('127.0.0.1', 8888);
