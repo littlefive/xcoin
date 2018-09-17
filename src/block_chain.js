@@ -7,13 +7,14 @@ module.exports = class  {
         const genesis = new Block(config.genesis);
         this.chain = [genesis];
     }
-    addBlock() {
+    addBlock(data) {
         let chain = this.chain;
         let preBlock = this.lastBlock();
         let preHash = preBlock.hash;
 
-        const block = new Block('data', preHash)
-        this.chain.push(block)
+        const block = new Block(data, preHash);
+        this.chain.push(block);
+        return block;
     }
     addNewBlockchain(text){
         let chain = this.chain;

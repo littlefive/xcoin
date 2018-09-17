@@ -9,7 +9,7 @@ module.exports = {
             proof++;
             const block = `${data}${previousHash}${timestamp}${proof}`;
             blockHash = hash(block)
-            if(blockHash.substr(0, 5) === '00000' ){
+            if(blockHash.substr(0, 4) === '0000' ){
                 console.log(blockHash)
                 break;
             }
